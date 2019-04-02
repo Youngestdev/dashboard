@@ -18,8 +18,8 @@ sagaMiddleware.run(rootSaga);
 store.dispatch(loadProductList());
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );

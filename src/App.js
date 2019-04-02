@@ -9,15 +9,15 @@ import ProductListContainer from './containers/ProductListContainer';
 class App extends Component {
   render() {
     return (
-        <Container>
-            <Row className="row">
-                <Col xs={12}>
-                    <h1>Product List</h1>
-                    <AddProduct />
-                    <ProductListContainer />
-                </Col>
-            </Row>
-        </Container>
+      <Container>
+        <Row className="row">
+          <Col xs={12}>
+            <h1>Product List</h1>
+            <AddProduct />
+            <ProductListContainer />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
