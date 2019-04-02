@@ -1,3 +1,6 @@
+// I don't know if this is the right approach. But:
+import axios from 'axios';
+
 export const ADD_PRODUCT = 'ADD_PRODUCT';
 
 export const LOAD_PRODUCT_LIST = 'LOAD_PRODUCT_LIST';
@@ -5,6 +8,10 @@ export const RENDER_PROUDCT_LIST = 'RENDER_PRODUCT_LIST';
 
 // For now, title alone.
 export function addProduct(title) {
+  axios
+    .post('http://localhost:3001/', { title })
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
   return {
     type: ADD_PRODUCT,
     productItem: {
