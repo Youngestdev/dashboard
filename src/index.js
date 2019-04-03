@@ -8,6 +8,7 @@ import App from './App';
 import { loadProductList } from './actions';
 import productApp from './reducers';
 import rootSaga from './sagas';
+import { BrowserRouter } from 'react-router-dom';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -19,7 +20,9 @@ store.dispatch(loadProductList());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

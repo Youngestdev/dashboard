@@ -1,5 +1,6 @@
 import { ADD_PRODUCT } from '../actions';
 import { RENDER_PROUDCT_LIST } from '../actions';
+import { USER_PROFILE_LOADED } from '../actions';
 
 const initialState = {
   productList: []
@@ -22,6 +23,11 @@ export default function productApp(state = initialState, action) {
       return {
         ...state,
         productList: newProductList
+      };
+    case USER_PROFILE_LOADED:
+      return {
+        ...state,
+        user: action.user
       };
     default:
       return state;
